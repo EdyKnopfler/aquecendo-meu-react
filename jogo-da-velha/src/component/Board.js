@@ -1,19 +1,14 @@
-import { useState } from "react";
 
-import GameStatus from '../model/gamestatus';
 import Square from "./Square";
 
-
-export default function Board() {
-  const [gameStatus, setGameStatus] = useState(new GameStatus())
-
+export default function Board({gameStatus, onPlay}) {
   function handleClick(i) {
     if (gameStatus.getValue(i) || gameStatus.getWinner()) {
       return;
     }
 
     const newStatus = gameStatus.makeMove(i);
-    setGameStatus(newStatus);
+    onPlay(newStatus);
   }
 
   function createRows() {
