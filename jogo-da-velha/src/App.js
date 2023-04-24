@@ -1,7 +1,10 @@
+import './styles.css';
+import Board from './Board';
+
 function App() {
   return (
     <div className="App">
-      kkkk
+      <Board />
     </div>
   );
 }
