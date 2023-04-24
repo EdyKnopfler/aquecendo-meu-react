@@ -6,6 +6,9 @@ import ProductTable from './productTable';
 import './filterableProductTable.css';
 
 export default function FilterableProductTable() {
+  const [filterText, setFilterText] = useState('');
+  const [inStockOnly, setInStockOnly] = useState(false);
+
   // Tratamento dos dados assíncronos
   // Com useEffect podemos chamar a função assíncrona e mudar o estado quando
   // os dados forem carregados
@@ -22,8 +25,17 @@ export default function FilterableProductTable() {
 
   return (
     <div className="filterableProductTable">
-      <SearchBar />
-      <ProductTable products={products} />
+      <SearchBar
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+        onFilterTextChange={setFilterText}
+        onInStockOnlyChange={setInStockOnly}
+        />
+      <ProductTable
+        products={products}
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+        />
     </div>
   )
 }
