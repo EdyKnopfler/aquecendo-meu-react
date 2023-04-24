@@ -8,4 +8,5 @@ O código não é o mesmo! Foi refatorado para separar a lógica do jogo da lóg
 * O histórico implementado é composto por uma lista de `GameStatus`
 * Também, o tabuleiro é criado usando loops ao invés de colocar as linhas e colunas _hardcoded_ (não sei se isso torna mais legível, mas como exercício foi interessante!)
 
-De acordo com o tutorial, a imutabilidade garante que 
+Um objeto `GameStatus` é imutável de modo a manter as funções dos componentes devem ser _[puras](
+https://react.dev/learn/keeping-components-pure)_, diminuindo a chance de bugs.
