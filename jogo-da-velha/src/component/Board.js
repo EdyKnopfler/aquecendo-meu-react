@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import GameStatus from './model/gamestatus';
+import GameStatus from '../model/gamestatus';
 import Square from "./Square";
 
 
