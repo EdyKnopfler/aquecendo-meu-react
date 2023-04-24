@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Produtos | Aprendendo React</title>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+
+    <!-- Compila JSX no browser, não use em produção! -->
+    <script src="babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+      const products = [
+        { title: 'Repolho', isFruit: false, id: 1 },
+        { title: 'Alho', isFruit: false, id: 2 },
+        { title: 'Maçã', isFruit: true, id: 3 },
+      ]
+    
+      function ShoppingList() {
+        // key: identifica um item para o React (útil para inclusões, exclusões, reordenações)
+        const listItems = products.map(product =>
+          <li
+            key={product.id}
+            style={{
+              color: product.isFruit ? 'magenta' : 'darkgreen'
+            }}
+          >
+            {product.title}
+          </li>
+        );
+
+        return (
+          <ul>
+            {listItems}
+          </ul>
+        )
+      }
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<ShoppingList />);
+
+    </script>
+  </body>
+</html>

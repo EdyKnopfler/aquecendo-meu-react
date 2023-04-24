@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Avatar | Aprendendo React</title>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+
+    <!-- Compila JSX no browser, não use em produção! -->
+    <script src="babel.min.js"></script>
+
+    <style>
+      .avatar {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      
+      const user = {
+        name: 'Hedy Lamarr',
+        imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+        imageSize: 90,
+      };
+    
+      function Profile() {
+        // <>: elemento "pai" qualquer
+        // className: equivalente ao class do HTML
+        // style={{}}: nada especial, o {} interno é um objeto JS comum
+        // Fechamentos obrigatórios: <><img /></>
+        return (
+          <>
+            <h1>{user.name}</h1>
+            <img
+              className="avatar"
+              src={user.imageUrl}
+              alt={'Foto de ' + user.name}
+              style={{
+                width: user.imageSize,
+                height: user.imageSize
+              }}
+              />
+          </>
+        );
+      }
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<Profile />);
+
+    </script>
+  </body>
+</html>
