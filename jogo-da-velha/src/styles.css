@@ -1,26 +1,43 @@
-.App {
-  margin: 0.5em;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
 }
 
 .square {
-  font-size: 1.5em;
-  font-weight: bold;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 0;
-  background: white;
-  border: 1px solid #AAA;
+  background: #fff;
+  border: 1px solid #999;
   float: left;
-  margin-left: -1px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
   margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
 }
 
 .board-row:after {
   clear: both;
   content: '';
-  display: block;
+  display: table;
 }
 
 .status {
-  margin-bottom: 0.5em;
+  margin-bottom: 10px;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
 }
