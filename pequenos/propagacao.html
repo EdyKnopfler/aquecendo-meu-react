@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Propagação de Eventos | Aprendendo React</title>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+
+    <!-- Compila JSX no browser, não use em produção! -->
+    <script src="babel.min.js"></script>
+
+    <style>
+      .Toolbar {
+        padding: 0.5em;
+        background: #AAA;
+      }
+
+      button {
+        padding: 0.1em;
+        width: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+      // O clique no botão propaga para a barra, a menos que usemos
+      // e.stopPropagation().
+      // O e.preventDefault() impede o tratamento padrão do browser:
+      // * para o botão é disparar o submit
+      // * para o form é realizar o submit
+      function Toolbar() {
+        return (
+          <div
+            className="Toolbar"
+            onClick={() => alert('Clicou na barra')}
+          >
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              alert('Enviando')
+            }}>
+            <button onClick={(e) => {
+              alert('Clicou no botão');
+                e.preventDefault();
+                e.stopPropagation();
+              }}>
+                OK!
+              </button>
+              <button>Enviar</button>
+            </form>
+          </div>
+        );
+      }
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<Toolbar />);
+
+    </script>
+  </body>
+</html>
