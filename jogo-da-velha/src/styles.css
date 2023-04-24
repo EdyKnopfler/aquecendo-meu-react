@@ -41,3 +41,11 @@ body {
 .game-info {
   margin-left: 20px;
 }
+
+button.currentMove {
+  font-weight: bold;
+}
+
+button.futureMove {
+  color: red;
+}

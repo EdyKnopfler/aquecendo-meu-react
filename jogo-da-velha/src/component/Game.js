@@ -6,22 +6,27 @@ import Board from "./Board";
 export default function Game() {
   // Histórico inicial: um tabuleiro zeradinho
   const [history, setHistory] = useState([new GameStatus()]);
+  const [currentMove, setCurrentMove] = useState(0);
 
   function handlePlay(newStatus) {
-    setHistory([...history, newStatus]);
+    setHistory([...history.slice(0, currentMove + 1), newStatus]);
+    setCurrentMove(currentMove + 1);
   }
 
   function jumpTo(moveIdx) {
-    setHistory(history.slice(0, moveIdx+1))
+    setCurrentMove(moveIdx);
   }
 
-  const currentStatus = history[history.length - 1];
+  const currentStatus = history[currentMove];
 
   const moves = history.map((status, move) => {
-    const description = 'Vá para ' + (move > 0 ? 'movimento #' + move : 'o início');
+    const description = move > 0 ? 'Movimento #' + move : 'Início';
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button 
+          onClick={() => jumpTo(move)}
+          className={move == currentMove ? 'currentMove' : (move > currentMove ? 'futureMove' : '')}
+        >{description}</button>
       </li>
     );
   });
