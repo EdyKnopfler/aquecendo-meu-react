@@ -59,8 +59,9 @@ export default class GameStatus {
         return squares[a];
       }
     }
-  
-    return null;
+
+    const allOccupied = squares.map((s) => !!s).reduce((partial, hasValue) => partial && hasValue);
+    return allOccupied ? 'Draw' : null;
   }
 
 }

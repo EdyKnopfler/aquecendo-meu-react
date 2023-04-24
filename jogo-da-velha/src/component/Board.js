@@ -42,7 +42,7 @@ export default function Board({gameStatus, onPlay}) {
     const winner = gameStatus.getWinner();
     
     if (winner) {
-      return `Vencedor: ${winner}`;
+      return winner == 'Draw' ? 'Deu velha!' : `Vencedor: ${winner}`;
     } else {
       return `Próximo: ${gameStatus.getCurrent()}`;
     }
