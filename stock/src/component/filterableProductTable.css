@@ -1,0 +1,39 @@
+.filterableProductTable {
+  margin: 1em;
+  width: 30%;
+}
+
+.searchBar input[type=text],
+.searchBar label {
+  display: block;
+  margin: 0.5em 0;
+}
+
+.searchBar input[type=text] {
+  font-size: 1em;
+  padding: 0.3em;
+  width: calc(100% - 0.9em);
+}
+
+.productTable {
+  margin-top: 1em;
+  width: 100%;
+}
+
+.productTable thead th {
+  background: rgb(65, 65, 234);
+  color: white;
+  padding: 0.5em;
+}
+
+.productCategoryRow {
+  background: #CCC;
+}
+
+.productNameCell {
+  width: 70%;
+}
+
+.productPriceCell {
+  text-align: center;
+}
