@@ -25,7 +25,11 @@ export default function Board() {
       for (let col = 0; col < 3; col++) {
         const idx = row * 3 + col;
         cols.push(
-          <Square key={idx} value={gameStatus.getValue(idx)} onSquareClick={() => handleClick(idx)} />
+          <Square
+            key={idx}
+            value={gameStatus.getValue(idx)}
+            onSquareClick={() => handleClick(idx)}
+            />
         );
       }
   
