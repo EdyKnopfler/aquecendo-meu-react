@@ -2,16 +2,18 @@
 import Square from "./Square";
 
 export default function Board({gameStatus, onPlay}) {
-  function handleClick(i) {
-    if (gameStatus.getValue(i) || gameStatus.getWinner()) {
+  function handleClick(idx) {
+    if (gameStatus.getValue(idx) || gameStatus.getWinner()) {
       return;
     }
 
-    const newStatus = gameStatus.makeMove(i);
+    const newStatus = gameStatus.makeMove(idx);
     onPlay(newStatus);
   }
 
   function createRows() {
+    // Tavez isto tenha ficado mais feio que fazer hardcoded,
+    // mas como exercício foi legal.
     const rows = [];
 
     for (let row = 0; row < 3; row++) {
