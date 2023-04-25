@@ -14,6 +14,7 @@ export default function BucketList() {
 
   function handleToggleMyList(artworkId, nextSeen) {  
     // ERRADO: modificar o objeto no array
+    // Pode ser feito assim com o useImmer! :)
 
     /*    
     // Copiei, blz
