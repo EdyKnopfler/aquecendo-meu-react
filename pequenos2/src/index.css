@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Component {
+  margin: 0.5em;
+  padding: 0.5em;
+  border-bottom: 1px solid #666;
+}
+
+.formField {
+  margin: 0.5em 0;
+}
+
+.formField label {
+  width: 100px;
+  display: inline-block;
+}
+
+.itemList {
+  float: left;
+  width: 50%;
+}
+
+.artBucket::after {
+  clear: both;
+  content: ' ';
+  display: block;
+}
