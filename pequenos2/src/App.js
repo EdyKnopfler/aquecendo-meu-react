@@ -4,6 +4,12 @@ import MovingDot from "./components/mutation";
 import Form from "./components/form";
 import FormWithImmer from "./components/updatesWithImmer";
 import BucketList from "./components/arraysOfObjects";
+import Picture from "./components/pegadinha";
+import Accordion from "./components/sharedState";
+import Tree from "./components/positionInTree";
+import Scoreboard from "./components/resettingState";
+import TaskApp from "./components/reducer";
+import Page from "./components/context";
 
 function App() {
   return (
@@ -31,6 +37,30 @@ function App() {
       <div className="Component">
         <h1>Arrays of objects</h1>
         <BucketList />
+      </div>
+      <div className="Component">
+        <h1>Selecione o fundo ou a imagem</h1>
+        <Picture />
+      </div>
+      <div className="Component">
+        <h1>A bicharada</h1>
+        <Accordion />
+      </div>
+      <div className="Component">
+        <h1>Position in tree</h1>
+        <Tree />
+      </div>
+      <div className="Component">
+        <h1>Resetting state</h1>
+        <Scoreboard />
+      </div>
+      <div className="Component">
+        <h1>Reducer</h1>
+        <TaskApp />
+      </div>
+      <div className="Component">
+        <h1>Context</h1>
+        <Page />
       </div>
     </>
   );

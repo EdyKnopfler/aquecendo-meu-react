@@ -18,6 +18,12 @@ code {
   border-bottom: 1px solid #666;
 }
 
+.Component::after {
+  clear: both;
+  content: ' ';
+  display: block;
+}
+
 .formField {
   margin: 0.5em 0;
 }
@@ -36,4 +42,48 @@ code {
   clear: both;
   content: ' ';
   display: block;
+}
+
+.background {
+  width: 600px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+}
+
+.background--active {
+  background: #a6b5ff;
+}
+
+.picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 5px solid transparent;
+}
+
+.picture--active {
+  border: 5px solid #a6b5ff;
+}
+
+.counter {
+  width: 150px;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 0 20px 20px 0;
+  float: left;
+}
+
+.hover {
+  background: wheat;
+}
+
+.section {
+  border: 1px solid #CCC;
+  border-radius: 15px;
+  padding: 0 0.7em;
 }
