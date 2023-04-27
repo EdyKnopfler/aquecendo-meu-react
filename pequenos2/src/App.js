@@ -14,6 +14,9 @@ import TaskApp from "./components/reducer";
 import Page from "./components/context";
 
 function App() {
+  // Usando roteamento (pacote react-router-dom)
+  // A rota "/" possui um atributo "exact" para não bater com os logo abaixo
+  // (permite algum tipo de subroteamento)
   return (
     <BrowserRouter>
       <nav>
