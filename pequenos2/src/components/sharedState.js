@@ -25,6 +25,7 @@ export default function Accordion() {
   // gerados em um loop a partir de dados
   return (
     <>
+      <h1>Lifting states up</h1>
       <h2>Scania</h2>
       <Panel
         title="Gato"

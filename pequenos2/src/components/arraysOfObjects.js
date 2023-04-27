@@ -61,20 +61,23 @@ export default function BucketList() {
   }
 
   return (
-    <div className="artBucket">
-      <div className="itemList">
-        <h2>My list of art to see:</h2>
-        <ItemList
-          artworks={myList}
-          onToggle={handleToggleMyList} />
+    <>
+      <h1>Arrays of objects</h1>
+      <div className="artBucket">
+        <div className="itemList">
+          <h2>My list of art to see:</h2>
+          <ItemList
+            artworks={myList}
+            onToggle={handleToggleMyList} />
+        </div>
+        <div className="itemList">
+          <h2>Your list of art to see:</h2>
+          <ItemList
+            artworks={yourList}
+            onToggle={handleToggleYourList} />
+        </div>
       </div>
-      <div className="itemList">
-        <h2>Your list of art to see:</h2>
-        <ItemList
-          artworks={yourList}
-          onToggle={handleToggleYourList} />
-      </div>
-    </div>
+    </>
   );
 }
 

@@ -13,30 +13,33 @@ export default function Page() {
   // Obs.: o último Section não informa level, veja mais adiante o tratamento
 
   return (
-    <Section level={1}>
-      <Heading>Title</Heading>
-      <Section level={2}>
-        <div>
-          <Heading>Heading</Heading>
-          <Heading>Heading</Heading>
-          <Heading>Heading</Heading>
-        </div>
-        <Section level={3}>
+    <>
+      <h1>Context</h1>
+      <Section level={1}>
+        <Heading>Title</Heading>
+        <Section level={2}>
           <div>
-            <Heading>Sub-heading</Heading>
-            <Heading>Sub-heading</Heading>
-            <Heading>Sub-heading</Heading>
+            <Heading>Heading</Heading>
+            <Heading>Heading</Heading>
+            <Heading>Heading</Heading>
           </div>
-          <Section>
+          <Section level={3}>
             <div>
-              <Heading>Sub-sub-heading</Heading>
-              <Heading>Sub-sub-heading</Heading>
-              <Heading>Sub-sub-heading</Heading>
+              <Heading>Sub-heading</Heading>
+              <Heading>Sub-heading</Heading>
+              <Heading>Sub-heading</Heading>
             </div>
+            <Section>
+              <div>
+                <Heading>Sub-sub-heading</Heading>
+                <Heading>Sub-sub-heading</Heading>
+                <Heading>Sub-sub-heading</Heading>
+              </div>
+            </Section>
           </Section>
         </Section>
       </Section>
-    </Section>
+    </>
   );
 }
 

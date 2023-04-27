@@ -23,7 +23,8 @@ export default function QueueingStateUpdates() {
 
   return (
     <>
-      <h1>{number}</h1>
+      <h1>Queueing state updates</h1>
+      <h2>{number}</h2>
       <button onClick={() => {
         setNumber(n => n + 1);  // Função
         setNumber(n => n + 1);

@@ -24,6 +24,7 @@ export default function TaskApp() {
 
   return (
     <>
+      <h1>Reducer</h1>
       <h2>Itinerary</h2>
       <AddTask onAddTask={handleAddTask} />
       <TaskList

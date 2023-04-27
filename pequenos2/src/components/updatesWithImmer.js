@@ -28,6 +28,7 @@ export default function FormWithImmer() {
 
   return (
     <>
+      <h1>Form with Immer library</h1>
       <div className="formField">
         <label>Name:</label>
         <input

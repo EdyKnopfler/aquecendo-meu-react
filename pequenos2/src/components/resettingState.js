@@ -6,18 +6,21 @@ import { useState } from 'react';
 export default function Scoreboard() {
   const [isPlayerA, setIsPlayerA] = useState(true);
   return (
-    <div>
-      {isPlayerA ? (
-        <Counter key="Taylor" person="Taylor" />
-      ) : (
-        <Counter key="Sarah" person="Sarah" />
-      )}
-      <button onClick={() => {
-        setIsPlayerA(!isPlayerA);
-      }}>
-        Next player!
-      </button>
-    </div>
+    <>
+      <h1>Resetting state</h1>
+      <div>
+        {isPlayerA ? (
+          <Counter key="Taylor" person="Taylor" />
+        ) : (
+          <Counter key="Sarah" person="Sarah" />
+        )}
+        <button onClick={() => {
+          setIsPlayerA(!isPlayerA);
+        }}>
+          Next player!
+        </button>
+      </div>
+    </>
   );
 }
 

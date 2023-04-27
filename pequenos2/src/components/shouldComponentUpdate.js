@@ -25,14 +25,18 @@ class CounterButton extends Component {
 
   render() {
     return (
-      <button
-        style={{color: COLORS[this.props.color]}}
-        onClick={() => {
-          this.setState(state => ({count: state.count + 1}));
-          this.props.buttonClicked();
-        }}>
-        Count: {this.state.count}
-      </button>
+      <>
+        <h1><code>shouldComponentUpdate</code> hook</h1>
+         <button
+          style={{color: COLORS[this.props.color]}}
+          onClick={() => {
+            this.setState(state => ({count: state.count + 1}));
+            this.props.buttonClicked();
+          }}
+        >
+          Count: {this.state.count}
+        </button>
+      </>
     );
   }
 }
