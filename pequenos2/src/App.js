@@ -19,7 +19,7 @@ function App() {
   // (permite algum tipo de subroteamento)
   return (
     <BrowserRouter>
-      <nav>
+      <nav class="menu">
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/shouldComponentUpdate"><code>shouldComponentUpdate</code> hook</Link></li>

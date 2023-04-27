@@ -12,13 +12,27 @@ code {
     monospace;
 }
 
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0.5em;
+}
+
+.menu li {
+  text-align: center;
+  margin: 0.1em;
+  padding: 0.1em;
+}
+
 .Component {
   margin: 0.5em;
   padding: 0.5em;
   border-bottom: 1px solid #666;
 }
 
-.Component::after {
+.Component::after,
+.artBucket::after {
   clear: both;
   content: ' ';
   display: block;
@@ -36,12 +50,6 @@ code {
 .itemList {
   float: left;
   width: 50%;
-}
-
-.artBucket::after {
-  clear: both;
-  content: ' ';
-  display: block;
 }
 
 .background {
