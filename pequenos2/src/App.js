@@ -1,3 +1,5 @@
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+
 import ShouldComponentUpdateSample from "./components/shouldComponentUpdate";
 import QueueingStateUpdates from "./components/queueingStateUpdates";
 import MovingDot from "./components/mutation";
@@ -13,56 +15,42 @@ import Page from "./components/context";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/shouldComponentUpdate"><code>shouldComponentUpdate</code> hook</Link></li>
+          <li><Link to="/queueingStateUpdates">Queueing state updates</Link></li>
+          <li><Link to="/updatingObjects">Updating objects</Link></li>
+          <li><Link to="/updatingFormObjects">Updating form objects</Link></li>
+          <li><Link to="/formWithImmer">Form with Immer library</Link></li>
+          <li><Link to="/arraysOfObjects">Arrays of objects</Link></li>
+          <li><Link to="/eventPropagation">Event propagation</Link></li>
+          <li><Link to="/liftingStatesUp">Lifting states up</Link></li>
+          <li><Link to="/positionInTree">Position in tree</Link></li>
+          <li><Link to="/resettingState">Resetting state</Link></li>
+          <li><Link to="/reducer">Reducer</Link></li>
+          <li><Link to="/context">Context</Link></li>
+        </ul>
+      </nav>
       <div className="Component">
-        <h1><code>shouldComponentUpdate</code> hook</h1>
-        <ShouldComponentUpdateSample />
+        <Routes>
+          <Route exact path="/" />
+          <Route path="/shouldComponentUpdate" element={<ShouldComponentUpdateSample />} />
+          <Route path="/queueingStateUpdates" element={<QueueingStateUpdates />} />
+          <Route path="/updatingObjects" element={<MovingDot />} />
+          <Route path="/updatingFormObjects" element={<Form />} />
+          <Route path="/formWithImmer" element={<FormWithImmer />} />
+          <Route path="/arraysOfObjects" element={<BucketList />} />
+          <Route path="/eventPropagation" element={<Picture />} />
+          <Route path="/liftingStatesUp" element={<Accordion />} />
+          <Route path="/positionInTree" element={<Tree />} />
+          <Route path="/resettingState" element={<Scoreboard />} />
+          <Route path="/reducer" element={<TaskApp />} />
+          <Route path="/context" element={<Page />} />
+        </Routes>
       </div>
-      <div className="Component">
-        <h1>Queueing state updates</h1>
-        <QueueingStateUpdates />
-      </div>
-      <div className="Component">
-        <h1>Updating objects</h1>
-        <MovingDot />
-      </div>
-      <div className="Component">
-        <h1>Updating form objects</h1>
-        <Form />
-      </div>
-      <div className="Component">
-        <h1>Form with Immer library</h1>
-        <FormWithImmer />
-      </div>
-      <div className="Component">
-        <h1>Arrays of objects</h1>
-        <BucketList />
-      </div>
-      <div className="Component">
-        <h1>Selecione o fundo ou a imagem</h1>
-        <Picture />
-      </div>
-      <div className="Component">
-        <h1>A bicharada</h1>
-        <Accordion />
-      </div>
-      <div className="Component">
-        <h1>Position in tree</h1>
-        <Tree />
-      </div>
-      <div className="Component">
-        <h1>Resetting state</h1>
-        <Scoreboard />
-      </div>
-      <div className="Component">
-        <h1>Reducer</h1>
-        <TaskApp />
-      </div>
-      <div className="Component">
-        <h1>Context</h1>
-        <Page />
-      </div>
-    </>
+    </BrowserRouter>
   );
 }
 
